@@ -1,0 +1,896 @@
+<link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">  
+<style type="text/css">
+  div {
+    /* border: 1px solid lightgray; */
+  }
+  input {
+    /* margin: 1px; */
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  .cs9055320D {background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAQCAYAAADqDXTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVEhL3ZWxDYUgEECvdAxHcARLSkZwBDZgBEagpKS0ZARHoKS0tLyfI0csfqFg1MSXEOAkPHKBE7AR5xxu28azOpqkMUbsug77vkdjTLW8WUrClBIqpfLYWstfj7kkLZB8mqbTctBaIwBUt3EceYsdOgzJh2FA7z1H/wFaVJOaMyzLglLKLJ/nmaM7t0gLJBdC5KyEEDh6s7RAQhJTW9f1g9JH03t4kV55MtxXcbk4cF/Fa2Xw8YJPtP/aEH+y/HDhmx0cLAAAAABJRU5ErkJggg==);background-repeat:no-repeat;}
+  .cs9D19D9B0 {background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAPCAYAAABqQqYpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVEhLtZShkoNAEERP8glIJBIZiURGIpGRSBwSiURGIpF8AhKJjEQikZN6e+wVdYFdLkdeVUTCZqene4YvsfB4PKSu6+XbZ7CKuF6vEoaheJ4nRVHINE3LEzNVVakGjmAUMY6jKj7Ps7owyzJxXVeSJJG+75dTr3DecRx1/ghGEVxC92socL/fJQgCuVwum1GVZakcpIEjGEX4vi95nu9G0HWdxHGs3OEczgECcYr/D8OgfjNhFEEEaZqqIrfbbfdCiiOCc1EUqQ9sObmFdTCBCBg0OqNA0zTLk1eISg8kThGZjUMi1rRt+5M32du2BXd0THv8WYTmaFRsEu6YeFuEZh0Von5DdHpG9vi3CA3d0rWGmBhWYvu4Exq9ljjDRlDctN5rThHBFiCCQaU4q3n09Q6niGBbeE0zE7ZN2OIUEaztO8W/EXkCUE8ciYcfMxwAAAAASUVORK5CYII=);background-repeat:no-repeat;}
+  .csBF0C554E {background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAALCAYAAAD8zZR4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhP7ZQvsEZAFMVFURRFURRFURRFUdREURRFURRFURRFURTPN+cOxex73/LE95u5w87cPffs3T8GNNi2DUVRvBJVVR2q39Ey1zQNPM9TFrsblmVhWZZD+Xe0zSVJcoz+huM4/+YeccscCxuG8TWY9wZBECj1r8EFSOf4c3aHK2PEcYy6rjHPs4i+zTRNcnOjKJJL4rou0jRF27ZY11VylNtKs0xiMifZti0iFKPoE8ZxRFmWCMNQzPD2Z1mGruvkqVKhdea4EopQjKIUp1kWY1EVwzDI08FtNE0Tvu8jz3P0ff+jmSta5q5QnGZZjEVZnB05zfDM8MsxTe77fsy8xyNzV1icHTnNvAPwAYH+wgZsSoMlAAAAAElFTkSuQmCC);background-repeat:no-repeat;}
+  .cs50B9C902 {background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAAAbCAYAAAAqCUKuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFXSURBVFhH7ZmtjoQwFIX7GEgkEolE8ghIJBKJQyKRSCSPgEQikUgkEom8k9Ntk+6GSWbntwP3S5qGlBA4nHtaiiAL6fuehmFQR+/HSlHCMCTXdcn3fWqahrZtUyPvwVpR4JZxHClJEnIch7Iso3me1RmvxWpRNOu6UlVV0j1RFFHbtmrkNXyFKCZd11Ecx1KgsixpWRY18jy+ThQNSinPc1laKLFnBrOANXEDNjUELPpbQRgHQUCe51Fd1w8Hs0jTVF4Mb8eWhty4pyymaSI8D9yDHsf3IGA9KH0k4H44Rr/s/wbzIUUxQRkimOGeoihucuDhRdFADIgCcSASZrFrnEYUE5QTcksHM8rN5JSiaK4F86lF0cApWAYIIeT6h53CTvmBM0XBs48Br1MUD69oETD87fMb/kregfdTduCdtx14j3YHq0Xh3XwDiML/ff4Al3zuDyHRBXoQKLGsdl8VAAAAAElFTkSuQmCC);background-repeat:no-repeat;}
+  .grid {
+    margin: 0;
+  }
+  .col, .col-fixed,
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+    padding: 0px;
+  }
+  .pad {
+    padding: 2px 5px 2px 5px;
+  }
+  .radio-small {
+    transform: scale(0.7);
+    margin-top: 0px;
+  }
+</style>
+<div class="grid" style="width:1582px;">
+  <div class="col-6">
+    <div class="grid">
+      <div class="col-12 border-1 " style="font-size:19px;font-weight:700;color:white;background:black">CRITICAL DEFECT FOLLOW UP ANALYSIS and COUNTERMEASURE</div>
+
+      <div class="col-12">
+        <div class="grid">
+          <div class="col-fixed w-max border-left-1 border-bottom-1 flex align-items-center" style="padding-left:7px;padding-right:7px"><span style="writing-mode:vertical-rl;font-size:12px;font-weight:700;transform:scale(-1)">SECTION A&nbsp;&nbsp;&nbsp;DETAILS</span></div>
+          <div class="col border-left-1 border-bottom-1 border-right-1 pad">
+            <div class="grid">
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-max">VIN:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Seq#:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Body#:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Insp Team:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Date Found:</div>
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-max">Responsibility:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Defect:</div>
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-max">Delta:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Water Leak:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Designation:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Rank:</div>
+                  <div class="col"></div>
+                  <div class="col-fixed w-max">Specification:</div>
+                  <div class="col"></div>
+                </div>
+              </div>
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-max">Comments:</div>
+                  <div class="col"></div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-max pt-1">Electrical Defect:</div>
+                  <div class="col">
+                    <div class="grid">
+
+                      <div class="col-12">
+                        <div class="grid">
+                          <div class="col-fixed" style="width:76px">
+                            <div class="flex justify-content-between">
+                              <div class="flex"><input type="radio"><label class="align-self-end">Yes</label></div>
+                              <div class="col-fixed cs9055320D" style="width:29px;"></div>
+                            </div>
+                          </div>
+                          <div class="col-fixed" style="width:109px">
+                            <div class="flex justify-content-between">
+                              <div class="flex"><input type="radio"><label class="align-self-end">W/H</label></div>
+                              <div class="col-fixed cs9055320D" style="width:29px;"></div>
+                            </div>
+                          </div>
+                          <div class="col-1">
+                            <input type="radio"><label>Pinch</label>
+                          </div>
+                          <div class="col-1">
+                            <input type="radio"><label>Screw</label>
+                          </div>
+                          <div class="col-fixed" style="width:120px">
+                            <input type="radio"><label>Cut Wire</label>
+                          </div>
+                          <div class="col-fixed" style="width:100px">
+                            <input type="radio"><label>Other Damage</label>
+                          </div>
+                          <div class="col">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="grid">
+                          <div class="col-fixed" style="width:76px">
+                            <input type="radio"><label>No</label>
+                          </div>
+                          <div class="col-fixed" style="width:109px">
+                            <div class="flex justify-content-between">
+                              <div class="flex"><input type="radio"><label class="align-self-end">Connector</label></div>
+                              <div class="col-fixed cs9055320D" style="width:29px;"></div>
+                            </div>
+                          </div>
+                          <div class="col-1">
+                            <input type="radio"><label>NPI</label>
+                          </div>
+                          <div class="col-1">
+                            <input type="radio"><label>IA</label>
+                          </div>
+                          <div class="col-fixed" style="width:120px">
+                            <input type="radio"><label>Terminal Push Out</label>
+                          </div>
+                          <div class="col-fixed" style="width:100px">
+                            <input type="radio"><label>Bent Terminal</label>
+                          </div>
+                          <div class="col">
+                            <input type="radio"><label>Other</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mt-1 mb-1">
+                        <div class="grid">
+                          <div class="col-fixed" style="width:76px"></div>
+                          <div class="col-fixed" style="width:109px"></div>
+                          <div class="col-fixed w-max">Connector #:</div>
+                          <div class="col-2 border-bottom-1"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-2">
+                    <div>Build Team:</div>
+                    <div><input type="radio"><label>A Team</label></div>
+                    <div><input type="radio"><label>B Team</label></div>
+                  </div>
+                  <div class="col-2">
+                    <div>Shift:</div>
+                    <div><input type="radio"><label>Day Shift</label></div>
+                    <div><input type="radio"><label>Night Shift</label></div>
+                  </div>
+                  <div class="col">
+                    <div>Day:</div>
+                      <div class="grid">
+                      <div class="col-6">
+                        <div><input type="radio"><label>Monday</label></div>
+                        <div><input type="radio"><label>Tuesday</label></div>
+                        <div><input type="radio"><label>Wednesday</label></div>
+                        <div><input type="radio"><label>Thursday</label></div>
+                      </div>
+                      <div class="col-6">
+                        <div><input type="radio"><label>Friday</label></div>
+                        <div><input type="radio"><label>Saturday</label></div>
+                        <div><input type="radio"><label>Sunday</label></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div>Quarter:</div>
+                    <div class="grid">
+                      <div class="col-6">
+                        <div><input type="radio"><label>Q1</label></div>
+                        <div><input type="radio"><label>Q2</label></div>
+                        <div><input type="radio"><label>Q3</label></div>
+                      </div>
+                      <div class="col-6">
+                        <div><input type="radio"><label>Q4</label></div>
+                        <div><input type="radio"><label>OT</label></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div>Timing:</div>
+                    <div><input type="radio"><label>5 min Pre Break / EOS</label></div>
+                    <div><input type="radio"><label>5 min Post Break / SOS</label></div>
+                    <div><input type="radio"><label>Not Applicable</label></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 mb-1">
+                <div>Team Member Status:</div>
+                <div class="grid">
+                  <div class="col-2"><input type="radio"><label>Reg T/M</label></div>
+                  <div class="col"><input type="radio"><label>New T/M in Training</label></div>
+                  <div class="col"><input type="radio"><label>Reg. T/M Rotation Training</label></div>
+                  <div class="col-1"><input type="radio"><label>T/L</label></div>
+                  <div class="col-fixed w-max align-self-end">Other:</div>
+                  <div class="col align-self-end border-bottom-1"></div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col">
+                    <div>T/M Experience on this Process and GPC Training?</div>
+                    <div class="grid">
+                      <div class="col">
+                        <div><input type="radio"><label>&lt; 3 months, no GPC training</label></div>
+                        <div><input type="radio"><label>&lt; 3 months, with GPC training</label></div>
+                      </div>
+                      <div class="col">
+                        <div><input type="radio"><label>&gt; 3 months, no GPC training</label></div>
+                        <div><input type="radio"><label>&gt; 3 months, with GPC training</label></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div>Safety Quality Audit Completed on T/M?</div>
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>Yes</label></div>
+                      <div class="col"><input type="radio"><label>No</label></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-3 align-self-end">Have you (G/L) seen the defect?</div>
+                  <div class="col-1"><input type="radio"><label>Yes</label></div>
+                  <div class="col-1"><input type="radio"><label>No</label></div>
+                  <div class="col-fixed w-max align-self-end">If no, Who?</div>
+                  <div class="col border-bottom-1"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="grid">
+          <div class="col-fixed w-max border-left-1 border-bottom-1 flex align-items-center" style="padding-left:7px;padding-right:7px"><span style="writing-mode:vertical-rl;font-size:12px;font-weight:700;transform:scale(-1)">SECTION B&nbsp;&nbsp;&nbsp;PROCESS INFO</span></div>
+          <div class="col border-left-1 border-bottom-1 border-right-1 pad">
+            <div class="grid">
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-3">
+                    <div>Pokayoke In Place?</div>
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>Yes</label></div>
+                      <div class="col"><input type="radio"><label>No</label></div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div>Is Pokayoke Functioning?</div>
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>Yes</label></div>
+                      <div class="col"><input type="radio"><label>No</label></div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div>If no, explain:</div>
+                    <div class="border-bottom-1 h-1rem">&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-3">
+                    <div>Was Pokayoke Bypassed?</div>
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>Yes</label></div>
+                      <div class="col"><input type="radio"><label>No</label></div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div>If yes, who and why?</div>
+                    <div class="border-bottom-1" style="height:14px">&nbsp;</div>
+                  </div>
+                  <div class="col">
+                    <div class="border-bottom-1" style="height:12px">&nbsp;</div>
+                    <div class="border-bottom-1" style="height:14px">&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-3">
+                    <div>Process Change?</div>
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>Yes</label></div>
+                      <div class="col"><input type="radio"><label>No</label></div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div>Timing</div>
+                    <div><input type="radio"><label>&lt; 1 month</label></div>
+                    <div><input type="radio"><label>&gt; 1 month</label></div>
+                  </div>
+                  <div class="col">
+                    <div>Reason for Process Change?</div>
+                    <div class="grid">
+                      <div class="col-2"><input type="radio"><label>ECI</label></div>
+                      <div class="col-2"><input type="radio"><label>Kaizen</label></div>
+                      <div class="col-3"><input type="radio"><label>Rebalance</label></div>
+                      <div class="col">
+                        <div><input type="radio"><label>Major Model Change</label></div>
+                        <div><input type="radio"><label>Minor Model Change</label></div>
+                      </div>
+                    </div>
+                  </div>                    
+                </div>
+              </div>
+
+              <div class="col-12 mb-1">
+                <div class="grid">
+                  <div class="col-fixed w-max">Option Name:</div>
+                  <div class="col border-bottom-1"></div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-5rem h-4rem border-1 border-round-2xl flex justify-content-center"><span class="align-self-center">Build</span></div>
+                  <div class="col-fixed ml-2 mt-4 cs9055320D" style="width:29px;"></div>
+                  <div class="col-4">
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>1-5%</label></div>
+                      <div class="col"><input type="radio"><label>6-15%</label></div>
+                    </div>
+                    <div><input type="radio"><label>16-30%</label></div>
+                    <div><input type="radio"><label>Greater than 30%</label></div>
+                  </div>
+                  <div class="col-fixed w-5rem h-4rem border-1 border-round-2xl flex justify-content-center"><span class="align-self-center">Cycle Time Fluctuation *F-3</span></div>                    
+                  <div class="col-fixed ml-2 mt-4 cs9055320D" style="width:29px;"></div>
+                  <div class="col">
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>1-5%</label></div>
+                      <div class="col"><input type="radio"><label>6-10%</label></div>
+                    </div>
+                    <div class="grid">
+                      <div class="col"><input type="radio"><label>11-15%</label></div>
+                      <div class="col"><input type="radio"><label>16-20%</label></div>
+                    </div>
+                    <div><input type="radio"><label>Greater than 25%</label></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 ">
+                <div class="grid">
+                  <div class="col-fixed w-max pt-1 pr-3">EIS</div>
+                  <div class="col-fixed w-max">
+                    <div><input type="radio"><label>Concern</label></div>
+                    <div><input type="radio"><label>OK</label></div>
+                  </div>
+                  <div class="col-fixed ml-2 mr-2 cs9055320D" style="width:29px;"></div>
+                  <div class="col">
+                    <div class="grid">
+                      <div class="col-fixed w-mas">Explain:</div>
+                      <div class="col border-bottom-1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="grid">
+          <div class="col-fixed w-max border-left-1 border-bottom-1 flex align-items-center"><span style="writing-mode:vertical-rl;font-size:12px;font-weight:700;transform:scale(-1);height:54px">SECTION C TOOLS</span></div>
+          <div class="col border-left-1 border-bottom-1 border-right-1 pad">
+            <div class="grid ">
+              <div class="col-3">
+                <div>QA Network</div>
+                <div class="grid">
+                  <div class="col"><input type="radio"><label>Yes</label></div>
+                  <div class="col"><input type="radio"><label>No</label></div>
+                  <div class="col"><input type="radio"><label>N/A</label></div>
+                </div>
+                <div class="grid">
+                  <div class="col-2 cs9D19D9B0 ml-1" style="width:33px;"></div>
+                  <div class="col-4"><input type="radio"><label>Pass</label></div>
+                  <div class="col"><input type="radio"><label>Fail</label></div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div>Process Diagnostic</div>
+                <div class="grid">
+                  <div class="col"><input type="radio"><label>Yes</label></div>
+                  <div class="col"><input type="radio"><label>No</label></div>
+                  <div class="col"><input type="radio"><label>N/A</label></div>
+                </div>
+                <div class="grid">
+                  <div class="col-2 cs9D19D9B0 ml-1" style="width:33px;"></div>
+                  <div class="col-4"><input type="radio"><label>Pass</label></div>
+                  <div class="col"><input type="radio"><label>Fail</label></div>
+                </div>
+              </div>
+              <div class="col ml-2">
+                <div>&nbsp;</div>
+                <div class="grid">
+                  <div class="col-3 pt-1">TIS Instruction:</div>
+                  <div class="col-2"><input type="radio"><label>OK</label></div>
+                  <div class="col-2"><input type="radio"><label>NG</label></div>
+                  <div class="col-2"><input type="radio"><label>N/A</label></div>
+                </div>
+                <div class="grid">
+                  <div class="col-3 pt-1">CVIS Instruction:</div>
+                  <div class="col-2"><input type="radio"><label>OK</label></div>
+                  <div class="col-2"><input type="radio"><label>NG</label></div>
+                  <div class="col-2"><input type="radio"><label>N/A</label></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="grid">
+          <div class="col-fixed w-max border-left-1 border-bottom-1 flex align-items-center" style="padding-left:7px;padding-right:7px"><span style="writing-mode:vertical-rl;font-size:12px;font-weight:700;transform:scale(-1)">SECTION D&nbsp;&nbsp;&nbsp;ABNORMALITY ANALYSIS</span></div>
+          <div class="col border-left-1 border-bottom-1 border-right-1 pad">
+
+            <div>1. Did the TM notice any abnormality?</div>
+            <div class="grid">
+              <div class="col-1">
+                <div><input type="radio"><label>No</label></div>
+                <div><input type="radio"><label>Yes</label></div>
+              </div>
+              <div class="col-1 flex flex-column">
+                <div class="col cs9055320D" style="width:29px;"></div>
+                <div class="col cs9055320D" style="width:29px;"></div>
+              </div>
+              <div class="col">
+                <div style="padding:3px">Work related problem</div>
+                <div style="padding:3px">Troubleshooting related problem</div>
+              </div>
+              <div class="col-1 flex flex-column">
+                <div class="col cs9055320D" style="width:29px;"></div>
+                <div class="col cs9055320D" style="width:29px;"></div>
+              </div>
+              <div class="col">
+                <div style="padding:3px">Go to Section D 2</div>
+                <div style="padding:3px">Go to Section D 3 - 5</div>
+              </div>
+            </div>
+
+            <div>2. What do you think are the problems that are related to work?</div>
+            <div><input type="checkbox"><label>TM did not notice defect condition</label></div>
+            <div class="flex gap-2">
+              <div><input type="checkbox"><label>TM did not follow Standardized work</label></div>
+              <div class="cs9055320D mt-1" style="width:29px;"></div>
+              <div class="col border-bottom-1"></div>
+            </div>
+            <div><input type="checkbox"><label>TM did follow Standardized work</label></div>
+            <div class="flex gap-2">
+              <div><input type="checkbox"><label>Other</label></div>
+              <div class="cs9055320D mt-1" style="width:29px;"></div>
+              <div class="col border-bottom-1"></div>
+            </div>
+
+            <div>3. What kind of abnormality occurred?</div>
+            <div><input type="checkbox"><label>Abnormality in Assembling</label></div>
+            <div><input type="checkbox"><label>Abnormality in Equipment</label></div>
+            <div class="flex gap-2">
+              <div><input type="checkbox"><label>Other</label></div>
+              <div class="cs9055320D mt-1" style="width:29px;"></div>
+              <div class="col border-bottom-1"></div>
+            </div>
+
+            <div class="flex gap-2">
+              <div>4. Is there any record of corrective action or troubleshooting taken?</div>
+              <div><input type="radio"><label>Yes</label></div>
+              <div><input type="radio"><label>No</label></div>
+            </div>
+
+            <div>
+              <div>5. What went wrong with Troubleshooting?</div>
+              <div class="grid mb-1">
+                <div class="col-5"><input type="radio"><label>Troubleshooting error by T/M</label></div>
+                <div class="col-fixed mt-1 mr-2 cs9055320D" style="width:29px;"></div>
+                <div class="col-fixed border-left-1 border-top-1 border-bottom-1 mr-2" style="width:10px"></div>
+                <div class="col">
+                  <div class="col"><input type="checkbox"><label>T/M noticed abnormality but did not think it was a problem</label></div>
+                  <div class="col"><input type="checkbox"><label>T/M noticed abnormality but did not report it</label></div>
+                  <div class="col"><input type="checkbox"><label>T/M noticed abnormality but forgot to report it</label></div>
+                  <div class="col"><input type="checkbox"><label>T/M tried to report abnormality but left it because nobody came to the line</label></div>
+                  <div class="col"><input type="checkbox"><label>T/M performed troubleshooting by him / herself</label></div>
+                  <div class="flex"><input type="checkbox"><label class="align-self-end">Other</label><div class="col border-bottom-1 ml-1"></div></div>
+                </div>
+              </div>
+              <div class="grid mb-1">
+                <div class="col-5"><input type="radio"><label>Troubleshooting error by
+                  troubleshooter</label></div>
+                <div class="col-fixed mt-1 mr-2 cs9055320D" style="width:29px;"></div>
+                <div class="col-fixed border-left-1 border-top-1 border-bottom-1 mr-2" style="width:10px"></div>
+                <div class="col">
+                  <div class="col"><input type="checkbox"><label>Troubleshooter forgot to troubleshoot abnormality</label></div>
+                  <div class="col"><input type="checkbox"><label>Troubleshooter took corrective action but did not troubleshoot completely</label></div>
+                  <div class="flex"><input type="checkbox"><label class="align-self-end">Other</label><div class="col border-bottom-1 ml-1"></div></div>
+                </div>
+              </div>
+              <div class="grid mb-1">
+                <div class="col-5"><input type="radio"><label>Miscommunication between T/M and
+                  troubleshooter</label></div>
+                <div class="col-fixed mt-1 mr-2 cs9055320D" style="width:29px;"></div>
+                <div class="col-fixed border-left-1 border-top-1 border-bottom-1 mr-2" style="width:10px"></div>
+                <div class="col">
+                  <div class="col"><input type="checkbox"><label>Information on abnormality was not communicated well</label></div>
+                  <div class="col"><input type="checkbox"><label>Wrong information on abnormality was communicated</label></div>
+                  <div class="flex"><input type="checkbox"><label class="align-self-end">Other</label><div class="col border-bottom-1 ml-1"></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-6" style="padding:2px 25px 2px 25px">
+    <div class="grid">
+      <div class="col-12">
+        <div class="grid flex align-items-end">
+          <div class="col-fixed w-max mr-1 font-bold">Defect Id:</div>
+          <div class="col border-1" style="height:16px"></div>
+          <div class="col-fixed w-max ml-3 mr-1">Completed By:</div>
+          <div class="col border-bottom-1"></div>
+          <div class="col-fixed w-max ml-3">Recurrence Issue:</div>
+          <div class="flex row">
+            <div><input type="radio"><label>Yes</label></div>
+            <div><input type="radio"><label>No</label></div>
+          </div>
+          <div class="col-fixed w-max ml-3 mr-1">Date:</div>
+          <div class="col border-bottom-1"></div>
+        </div>
+      </div>
+
+      <div class="col-12 font-bold mt-2">What are the Rootcauses?</div>
+      <div class="col-12 mt-1 h-2rem border-1 border-round-md font-bold">Tackle Problem:</div>
+      <div class="col-12">
+        <div class="grid">
+          <div class="col-6">
+            <div class="col-4 col-offset-4 mt-1 border-1 border-round-md flex justify-content-center">WHY MADE?</div>
+            <div class="mt-1 mr-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 mr-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 mr-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 mr-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 mr-2 border-1 border-round-3xl">
+              <div class="font-bold flex justify-content-center">ROOT CAUSE:</div>
+              <div class="grid" style="font-size:9px;padding:0 5px 0 5px">
+                <div class="col">
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Man</label></div>
+                  <div><input class="radio-small" type="radio"><label>Not following SWC missed step</label></div>
+                  <div><input class="radio-small" type="radio"><label>Not following SWC incorrectly
+                    performed</label></div>
+                  <div><input class="radio-small" type="radio"><label>TM in Training</label></div>
+                  <div>&nbsp;</div>
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Method</label></div>
+                  <div><input class="radio-small" type="radio"><label>SWC NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Process instruction sheet NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>PM schedule NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>OP> conditional-daily check NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Manifest NG</label></div>
+                </div>
+                <div class="col">
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Machine</label></div>
+                  <div><input class="radio-small" type="radio"><label>Jig / Fixture / Die NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Initial setting NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Calibration NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Breakdown</label></div>
+                  <div>&nbsp;</div>
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Material</label></div>
+                  <div><input class="radio-small" type="radio"><label>Wrong part</label></div>
+                  <div><input class="radio-small" type="radio"><label>Defective part</label></div>
+                  <div><input class="radio-small" type="radio"><label>Missing part</label></div>
+                  <div><input class="radio-small" type="radio"><label>Design NG</label></div>
+                </div>
+                <div class="col">
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Management</label></div>
+                  <div><input class="radio-small" type="radio"><label>Training NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Manpower Allocation
+                    overcycle</label></div>
+                  <div><input class="radio-small" type="radio"><label>Process Mgmt NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>QA network fail</label></div>
+                  <div><input class="radio-small" type="radio"><label>Process Diagnostic fail</label></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="col-4 col-offset-4 mt-1 border-1 border-round-md flex justify-content-center">WHY SHIPPED?</div>
+            <div class="mt-1 ml-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 ml-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 ml-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 ml-2 h-2rem border-1 border-round-md font-bold"></div>
+            <div class="csBF0C554E mt-1 m-auto" style="width:39px;height:11px;"></div>
+            <div class="mt-1 ml-2 border-1 border-round-3xl">
+              <div class="font-bold flex justify-content-center">ROOT CAUSE:</div>
+              <div class="grid" style="font-size:9px;padding:0 5px 0 5px">
+                <div class="col">
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Man</label></div>
+                  <div><input class="radio-small" type="radio"><label>Overlook</label></div>
+                  <div><input class="radio-small" type="radio"><label>Wrong Judgement</label></div>
+                  <div><input class="radio-small" type="radio"><label>Not following SWC</label></div>
+                  <div><input class="radio-small" type="radio"><label>Poor Repair</label></div>
+                  <div><input class="radio-small" type="radio"><label>Poor Troubleshooting</label></div>
+                  <div>&nbsp;</div>
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Method</label></div>
+                  <div><input class="radio-small" type="radio"><label>No Inspection</label></div>
+                  <div><input class="radio-small" type="radio"><label>Low Inspection Frequency</label></div>
+                  <div><input class="radio-small" type="radio"><label>SWC NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>No CVIS Standard</label></div>
+                </div>
+                <div class="col">
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Machine</label></div>
+                  <div><input class="radio-small" type="radio"><label>Pokayoke not working</label></div>
+                  <div><input class="radio-small" type="radio"><label>Equip. Setting / Calibration NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Wrong tool</label></div>
+                  <div><input class="radio-small" type="radio"><label>Defective tool</label></div>
+                  <div>&nbsp;</div>
+                  <div><input class="radio-small" type="radio"><label class="font-bold">Management</label></div>
+                  <div><input class="radio-small" type="radio"><label>Training NG</label></div>
+                  <div><input class="radio-small" type="radio"><label>Manpower allocation / overcycle</label></div>
+                  <div><input class="radio-small" type="radio"><label>Process Mgmt NG</label></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 font-bold mt-2 mb-1">Containment - if necessary</div>
+      <div class="col-12">
+        <table style="width:100%;text-align:center;">
+          <colgroup>
+            <col style="width: 61%;">
+            <col style="width: 13%;">
+            <col style="width: 13%;">
+            <col style="width: 13%;">
+         </colgroup>
+          <thead>
+            <tr>
+              <td>Temporary Countermeasures</td>
+              <td>Who</td>
+              <td>Date</td>
+              <td>AM Sign Off</td>
+            </tr>
+          </thead>
+          <tbody style="height:6rem">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-12 font-bold mt-2 flex">
+        <div class="align-self-center">Permanent Countermeasures</div>
+        <div class="border-1 border-round-sm pad ml-3 mb-1">Key Points: Take a \"physical\" action. Make it visual. Incorporate JKK where possible.</div>
+      </div>
+      <div class="col-12">
+        <table style="width:100%;text-align:center;">
+          <colgroup>
+            <col style="width: 2%;">
+            <col style="width: 59%;">
+            <col style="width: 13%;">
+            <col style="width: 13%;">
+            <col style="width: 13%;">
+         </colgroup>
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>Action</td>
+              <td>Who</td>
+              <td>Date</td>
+              <td>AM Sign Off</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="height:4rem">
+              <td>1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr style="height:4rem">
+              <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr style="height:4rem">
+              <td>3</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-12 font-bold mt-2 mb-1">Signature</div>
+      <div class="col-6 flex pr-2">
+        <div class="border-left-1 border-top-1 border-bottom-1 flex">
+          <div class="align-self-center" style="text-align:center">RESP SFT</div>
+        </div>
+        <table style="width:100%;text-align:center;">
+          <thead>
+            <tr>
+              <td>AM</td>
+              <td>GL</td>
+              <td>TL</td>
+              <td>TM</td>
+              <td>TM</td>
+              <td>TM</td>
+              <td>TM</td>
+            </tr>
+          </thead>
+          <tbody style="height:4rem">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6 flex pl-2">
+        <div class="border-left-1 border-top-1 border-bottom-1 flex">
+          <div class="align-self-center" style="text-align:center">OPP SFT</div>
+        </div>
+        <table style="width:100%;text-align:center;">
+          <thead>
+            <tr>
+              <td>AM</td>
+              <td>GL</td>
+              <td>TL</td>
+              <td>TM</td>
+              <td>TM</td>
+              <td>TM</td>
+              <td>TM</td>
+            </tr>
+          </thead>
+          <tbody style="height:4rem">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-12 font-bold mt-2 mb-1">Process Review</div>
+      <div class="col-12">
+        <table style="width:100%;text-align:center;">
+          <colgroup>
+            <col style="width: 5%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 55%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+         </colgroup>
+          <thead>
+            <tr>
+              <td>F/U#</td>
+              <td>Date</td>
+              <td>Result</td>
+              <td>Comment</td>
+              <td>Next FU Day</td>
+              <td>Mgr Sign Off</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1</td>
+              <td></td>
+              <td class="pad">
+                <div class="flex gap-1 h-1rem">
+                  <div>OK</div>
+                  <div class="cs9055320D" style="width:29px;"></div>
+                  <div>Closed</div>
+                </div>
+                <div class="flex gap-1 h-2rem mt-1">
+                  <div class="align-self-center">NG</div>
+                  <div class="cs50B9C902" style="width:69px">
+                  </div>                  
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>#2</td>
+              <td></td>
+              <td class="pad">
+                <div class="flex gap-1 h-1rem">
+                  <div>OK</div>
+                  <div class="cs9055320D" style="width:29px;"></div>
+                  <div>Closed</div>
+                </div>
+                <div class="flex gap-1 h-2rem mt-1">
+                  <div class="align-self-center">NG</div>
+                  <div class="cs50B9C902" style="width:69px">
+                  </div>                  
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-12 flex justify-content-center" style="height:1119px">
+    <div class="flex align-self-center">
+      <div class="w-max border-left-1 border-top-1 border-bottom-1 flex align-items-center" style="padding-left:7px;padding-right:7px"><span style="writing-mode:vertical-rl;font-size:12px;font-weight:700;transform:scale(-1)">DEFECT IMAGE</span></div>
+      <div class="border-1" style="width:902px;height:667px">&nbsp;</div>
+    </div>
+  </div>
+</div>
